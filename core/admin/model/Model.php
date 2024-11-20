@@ -171,7 +171,7 @@ class Model extends BaseModel
 
            $columns = $this->showColumns($table);
 
-           $fields[] = $columns['id_row'] . 'as id';
+           $fields[] = $columns['id_row'] . ' as id';
 
            $fieldName = isset($columns['name']) ? "CASE WHEN name <> '' THEN name " : '';
 
@@ -227,6 +227,7 @@ class Model extends BaseModel
        if ($order){
 
             $order = ($correctCurrentTable ? 'current_table DESC, ' : '') . '(' . implode('+', $order) . ')';
+
             $orderDirection = 'DESC';
 
        }

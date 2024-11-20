@@ -10,11 +10,17 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpStepFilterConfiguration">
+    <skipped_functions>
+      <skipped_function name="core\admin\model\Model-&gt;search" />
+      <skipped_function name="core\base\controller\BaseAjax-&gt;route" />
+    </skipped_functions>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
