@@ -216,7 +216,7 @@ class Model extends BaseModel
 
            if ($where){
 
-               //$this->buildUnion;
+               $this->buildUnion();
 
            }
 

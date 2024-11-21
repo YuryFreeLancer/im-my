@@ -95,6 +95,9 @@ abstract class BaseModel extends BaseModelMethods
       $limit = $set['limit'] ? 'LIMIT ' . $set['limit'] : '';
  
       $query = "SELECT $fields FROM $table $join $where $order $limit";
+
+      if (!empty($set['return_queri']))
+          return $query;
       
       $res = $this->query($query);
 
@@ -207,6 +210,27 @@ abstract class BaseModel extends BaseModelMethods
       }
 
       return $this->query($query, 'u');
+
+   }
+
+   public function buildUnion($table, $set){
+
+       if (array_key_exists('fields', $set) && $set['fields'] === null) return $this;
+
+       if (array_key_exists('fields', $set) || empty($set['fields'])){
+
+           $set['fields'] = [];
+
+           $columns = $this->showColumns($table);
+
+           unset($columns['id_row'], $columns['multy_id_row']);
+
+           foreach ($columns as $row => $item)
+               $set['fields'][] = $row;
+
+       }
+
+       $this->union[$table] = $set;
 
    }
 //--------------------------
