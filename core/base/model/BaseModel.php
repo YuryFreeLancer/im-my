@@ -27,7 +27,7 @@ abstract class BaseModel extends BaseModelMethods
 
       }
 
-      $this->db->query('SET_NAMES UTF8');
+      $this->db->query('SET NAMES UTF8');
 
    }
    /**
