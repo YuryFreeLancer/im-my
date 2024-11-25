@@ -20,6 +20,7 @@ class Model extends BaseModel
 
     use Singleton;
 
+
    public function showForeignKeys($table, $key = false){
 
     $db = DB_NAME;
@@ -32,8 +33,6 @@ class Model extends BaseModel
               CONSTRAINT_NAME <> 'PRIMERY' AND REFERENCED_TABLE_NAME is not null $where";
 
      return $this->query($query);
-
-
 
    }
 
@@ -216,11 +215,17 @@ class Model extends BaseModel
 
            if ($where){
 
-               $this->buildUnion();
+               $this->buildUnion($table, [
+                   'fields' => $fields,
+                   'where' => $where,
+                   'no_concat' => true
+               ]);
 
            }
 
        }
+
+       $this->test();
 
         $orderDirection = null;
 

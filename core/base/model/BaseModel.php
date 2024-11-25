@@ -32,6 +32,47 @@ abstract class BaseModel extends BaseModelMethods
    }
    /**
     * $crud = r - SELECT / c - INSERT / u - UPDATE / d - DELETE
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
     */
    final public function query($query, $crud = 'r', $return_id = false){
 
@@ -119,6 +160,38 @@ abstract class BaseModel extends BaseModelMethods
     * except => ['исключение 1', 'исключение 2'] - исключает данные элементы массива из добавления в запрос
     * return_id => true|false - возвращать или нет идентификатор вставленной записи
     * @return mixed
+
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
     */
 
    final public function add($table, $set = []){
@@ -161,6 +234,7 @@ abstract class BaseModel extends BaseModelMethods
                $where = 'WHERE ' . $columns['id_row'] . '=' . $set['fields'][$columns['id_row']];
                unset($set['fields'][$columns['id_row']]);
             }
+
          }
 
       }
@@ -172,7 +246,13 @@ abstract class BaseModel extends BaseModelMethods
       return $this->query($query, 'u');
 
    }
-//--------------------------
+
+    /**
+     * @param $table
+     * @param $set
+     * @return array|bool
+     * @throws DbException
+     */
    public function delete($table, $set = []){
 
       $table = trim($table);
@@ -217,13 +297,13 @@ abstract class BaseModel extends BaseModelMethods
 
        if (array_key_exists('fields', $set) && $set['fields'] === null) return $this;
 
-       if (array_key_exists('fields', $set) || empty($set['fields'])){
+       if (!array_key_exists('fields', $set) || empty($set['fields'])){
 
            $set['fields'] = [];
 
            $columns = $this->showColumns($table);
 
-           unset($columns['id_row'], $columns['multy_id_row']);
+           unset($columns['id_row'], $columns['multi_id_row']);
 
            foreach ($columns as $row => $item)
                $set['fields'][] = $row;
@@ -232,8 +312,18 @@ abstract class BaseModel extends BaseModelMethods
 
        $this->union[$table] = $set;
 
+       $this->union[$table]['return_query'] = true;
+
+       return $this;
+
    }
-//--------------------------
+
+   public  function test(){
+
+       $a = 1;
+
+   }
+
    final public function showColumns($table){
 
       if (!isset($this->tableRows[$table]) || !$this->tableRows[$table]) {
