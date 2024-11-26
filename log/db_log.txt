@@ -540,3 +540,23 @@ Fault: 13-09-2024 8-33-22 - Ошибка в SQL запросе: INSERT INTO good
 D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
 In line41
 
+Fault: 26-11-2024 16-28-50 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%LINK-1test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%LINK-1te' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 16-29-59 - Ошибка в SQL запросе: (Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 16-33-14 - Ошибка в SQL запросе: (Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 16-35-47 - Ошибка в SQL запросе: (Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 16-48-11 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%fe%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%fe%')) D' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+

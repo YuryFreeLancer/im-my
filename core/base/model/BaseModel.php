@@ -312,9 +312,112 @@ abstract class BaseModel extends BaseModelMethods
 
    }
 
-   public  function test(){
+   public  function getUnion($set = []){
 
-       $a = 1;
+       if (!$this->union)
+           return false;
+
+       $unionType = ' UNION ' . (!empty($set['type']) ? strtoupper($set['type']) . ' ' : '');
+
+       $maxCount = 0;
+
+       $maxTableCount = '';
+
+       foreach ($this->union as $key => $item){
+
+           $count = count($item{'fields'});
+
+           $joinFields = '';
+
+           if (!empty($item['join'])){
+
+               foreach ($item['join'] as $table => $data){
+
+                   if (array_key_exists('fields', $data) && $data['fields']){
+
+                       $count += $table;
+
+                   }elseif (!array_key_exists('fields', $data) || (!$joinFields['data'] || $data['fields'] === null)){
+
+                       $columns = $this->showColumns($table);
+
+                       unset($columns['id_row'], $columns['multi_id_row']);
+
+                       $columns += count($columns);
+
+                       foreach ($columns as $field => $value)
+                           $this->union[$key]['join'][$table]['fields'][] = $field;
+
+                       $joinFields = $table;
+
+                   }
+
+               }
+
+           }else{
+
+               $this->union[$key]['no_concat'] = true;
+
+           }
+
+           if ($count > $maxCount || ($count === $maxCount && $joinFields)){
+
+               $maxCount = $count;
+
+               $maxTableCount = $key;
+
+           }
+
+           $this->union[$key]['lasJoinTable'] = $joinFields;
+
+           $this->union[$key]['countFields'] = $count;
+
+       }
+
+       $query = '';
+
+       if ($maxCount && $maxTableCount){
+
+           $query .= '(' . $this->get($maxTableCount, $this->union[$maxTableCount]) . ')';
+
+           unset($this->union[$maxTableCount]);
+
+       }
+
+       foreach ($this->union as $key => $item){
+
+           if (isset($item['countFields']) && $item['countFields'] < $maxCount){
+
+               for ($i = 0; $i < $maxCount - $item['countFields']; $i++){
+
+                   if ($item['lasJoinTable'])
+                       $item['join'][$item['lasJoinTable']]['fields'][] = null;
+
+                   else
+                       $item['fields'][] = null;
+
+               }
+
+           }
+
+           $query && $query .= $unionType;
+
+           $query .= '(' . $this->get($key, $item) . ')';
+
+       }
+
+       $order = $this->createOrder($set);
+
+       $limit = !empty($set['limit']) ? 'LIMIT ' . $set['limit'] : '';
+
+       if (method_exists($this, 'createPagination'))
+           $this->createPagination($set, "($query)", $limit);
+
+       $query .= " $order $limit";
+
+       $this->union = [];
+
+       return  $this->query((trim($query)));
 
    }
 

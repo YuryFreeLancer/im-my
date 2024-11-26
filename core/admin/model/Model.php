@@ -225,8 +225,6 @@ class Model extends BaseModel
 
        }
 
-       $this->test();
-
         $orderDirection = null;
 
        if ($order){
@@ -236,6 +234,16 @@ class Model extends BaseModel
             $orderDirection = 'DESC';
 
        }
+
+       $result = $this->getUnion([
+           //'type' => 'all',
+           //'pagination' => [],
+           //'limit' => 3,
+           'order' => $order,
+           'order_direction' => $orderDirection
+       ]);
+
+       $a = 1;
 
     }
 
