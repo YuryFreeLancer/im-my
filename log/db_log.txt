@@ -560,3 +560,87 @@ Fault: 26-11-2024 16-48-11 - Ошибка в SQL запросе: () UNION () UNI
 D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
 In line41
 
+Fault: 26-11-2024 18-21-23 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 18-52-19 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 18-53-19 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 18-58-57 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 19-02-20 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 19-06-24 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%LINK-3test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%LINK-3te' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 19-29-35 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-16-45 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%testtes%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%testtes%' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-16-45 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%testte%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%testte%'' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-16-46 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%testt%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%testt%')' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-16-46 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-16-46 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%tes' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-16-46 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%te%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%te%' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-16-46 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%content%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%content%' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-17-05 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%content%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%content%' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-17-33 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%content%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%content%' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-22-01 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces is deprecated in /E:/OpenServer1/domains/im.my/public_html/core/base/model/BaseModel.php on line 328%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces is deprecated in /E:/OpenServer1/domains/im.my/public_html/core/base/model/BaseModel.php on line%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces is deprecated in /E:/OpenServer1/domains/im.my/public_html/core/base/model/BaseModel.php on%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces is deprecated in /E:/OpenServer1/domains/im.my/public_html/core/base/model/BaseModel.php%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces is deprecated in%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces is deprecated%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces is%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly braces%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with curly%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax with%')+(name LIKE '%PHP Deprecated: Array and string offset access syntax%')+(name LIKE '%PHP Deprecated: Array and string offset access%')+(name LIKE '%PHP Deprecated: Array and string offset%')+(name LIKE '%PHP Deprecated: Array and string%')+(name LIKE '%PHP Deprecated: Array and%')+(name LIKE '%PHP Deprecated: Array%')+(name LIKE '%PHP Deprecated:%')+(name LIKE '%PHP%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%PHP Depr' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-22-43 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%item%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%item%'))' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 20-54-51 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current table DESC, ((name LIKE '%current table%')+(name LIKE '%current%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current table DESC, ((name LIKE '%current ' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 21-10-08 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY  DESC, ((name LIKE '%current_table%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY  DESC, ((name LIKE '%current_table%')) DES' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 26-11-2024 21-11-28 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%orde%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%orde%'))' at line 1
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+

@@ -325,7 +325,7 @@ abstract class BaseModel extends BaseModelMethods
 
        foreach ($this->union as $key => $item){
 
-           $count = count($item{'fields'});
+           $count = count($item['fields']);
 
            $joinFields = '';
 
@@ -335,7 +335,9 @@ abstract class BaseModel extends BaseModelMethods
 
                    if (array_key_exists('fields', $data) && $data['fields']){
 
-                       $count += $table;
+                       $count += count($data['fields']);
+
+                       $joinFields = $table;
 
                    }elseif (!array_key_exists('fields', $data) || (!$joinFields['data'] || $data['fields'] === null)){
 
