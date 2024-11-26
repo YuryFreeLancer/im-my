@@ -1,14 +1,6 @@
 <?php 
 
-
-
-
-
-
-
 namespace core\base\model;
-
-
 
 use core\base\exceptions\DbException;
 
@@ -23,63 +15,32 @@ abstract class BaseModel extends BaseModelMethods
 
       if($this->db->connect_error){
 
-         throw new DbException('Ошибка подключения к базе данных: ' . $this->db->connect_errno . ' ' . $this->db->connect_error);
+         throw new DbException('Ошибка подключения к базе данных: '
+             . $this->db->connect_errno . ' ' . $this->db->connect_error);
 
       }
 
       $this->db->query('SET NAMES UTF8');
 
    }
-   /**
-    * $crud = r - SELECT / c - INSERT / u - UPDATE / d - DELETE
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    */
+
+    /**
+     * @param $query
+     * @param $crud= r - SELECT / c - INSERT / u - UPDATE / d - DELETE
+     * @param $return_id
+     * @return array|bool
+     * @throws DbException
+     */
+
    final public function query($query, $crud = 'r', $return_id = false){
 
       $result = $this->db->query($query);
 
       if($this->db->affected_rows === -1){
-         throw new DbException('Ошибка в SQL запросе: ' . $query . ' - ' . $this->db->errno . $this->db->error);
+
+         throw new DbException('Ошибка в SQL запросе: '
+             . $query . ' - ' . $this->db->errno . $this->db->error);
+
       }
 
       switch($crud){
@@ -87,6 +48,7 @@ abstract class BaseModel extends BaseModelMethods
          case 'r':
 
             if($result->num_rows){
+
                $res = [];
 
                for($i = 0; $i < $result->num_rows; $i++){
@@ -109,11 +71,50 @@ abstract class BaseModel extends BaseModelMethods
             break;
 
          default:
+
             return true;
+
             break;
+
       }
+
    }
-   
+
+    /**
+     * @param $table
+     * @param $set
+     * 'fields' => ['id', 'name']
+     * 'no_concat' => false/true Если true не присоединять имя таблицы к полям и where
+     * 'where' => ['fio' => 'smirnova', 'name' => 'Masha', 'surname' => 'Sergeevna']
+     * 'operand' => ['=', '<>']
+     * 'condition' => ['AND']
+     * 'order' => ['fio', 'name', 'surname']
+     * 'order_direction' => ['ASC', 'DESC']
+     * 'limit' => '1'
+     *    'join' => [
+     *    [
+     *       'table' => 'join_table1'
+     *       'fields' => ['id as j_id', 'name as j_name']
+     *       'type' => 'left'
+     *       'where' => ['name' => 'Sasha']
+     *       'operand'=> ['=']
+     *       'condition' => ['OR']
+     *       'on' => ['id' => 'parent_id']
+     *       'group_condition' => ['AND']
+     *     ],
+     *  'join_table1' => [
+     *        'fields' => ['id as j2_id', 'name as j2_name']
+     *        'type' => 'left'
+     *        'where' => ['name' => 'Sasha']
+     *        'operand'=> ['=', '<>']
+     *        'condition' => ['AND']
+     *        'on' =? [
+     *            'table' => 'teachers'
+     *            'fields' => ['id' => 'parent_id']
+     *     ]
+     *   ]
+     * ]
+     */
    final public function get($table, $set = []){
 
       $fields = $this->createFields($set, $table);
@@ -160,40 +161,7 @@ abstract class BaseModel extends BaseModelMethods
     * except => ['исключение 1', 'исключение 2'] - исключает данные элементы массива из добавления в запрос
     * return_id => true|false - возвращать или нет идентификатор вставленной записи
     * @return mixed
-
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
     */
-
    final public function add($table, $set = []){
 
       $set['fields'] = (is_array($set['fields']) && !empty($set['fields'])) ? $set['fields'] : $_POST;
@@ -250,9 +218,35 @@ abstract class BaseModel extends BaseModelMethods
     /**
      * @param $table
      * @param $set
-     * @return array|bool
-     * @throws DbException
+     * 'fields' => ['id', 'name']
+     *  'where' => ['fio' => 'smirnova', 'name' => 'Masha', 'surname' => 'Sergeevna']
+     *  'operand' => ['=', '<>']
+     *  'condition' => ['AND']
+     *     'join' => [
+     *     [
+     *        'table' => 'join_table1'
+     *        'fields' => ['id as j_id', 'name as j_name']
+     *        'type' => 'left'
+     *        'where' => ['name' => 'Sasha']
+     *        'operand'=> ['=']
+     *        'condition' => ['OR']
+     *        'on' => ['id' => 'parent_id']
+     *        'group_condition' => ['AND']
+     *      ],
+     *   'join_table1' => [
+     *         'fields' => ['id as j2_id', 'name as j2_name']
+     *         'type' => 'left'
+     *         'where' => ['name' => 'Sasha']
+     *         'operand'=> ['<>']
+     *         'condition' => ['AND']
+     *         'on' => [
+     *             'table' => 'teachers'
+     *             'fields' => ['id' => 'parent_id']
+     *      ]
+     *    ]
+     *  ]
      */
+
    public function delete($table, $set = []){
 
       $table = trim($table);
