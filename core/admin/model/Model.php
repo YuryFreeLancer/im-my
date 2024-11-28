@@ -186,7 +186,7 @@ class Model extends BaseModel
 
                if (isset($value['Type']) &&
                 (stripos($value['Type'], 'char') !== false ||
-                stripos($value['Type'], 'char') !== false)){
+                stripos($value['Type'], 'text') !== false)){
 
                    $searchRows[] = $col;
 
@@ -249,7 +249,7 @@ class Model extends BaseModel
 
     protected function createWhereOrder($searchRows, $searchArr, $orderRows, $table){
 
-       $where = [];
+       $where = '';   //  $where = '';
 
        $order = [];
 

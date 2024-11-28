@@ -370,7 +370,7 @@ abstract class BaseModel extends BaseModelMethods
 
            }
 
-           $this->union[$key]['lasJoinTable'] = $joinFields;
+           $this->union[$key]['lastJoinTable'] = $joinFields;
 
            $this->union[$key]['countFields'] = $count;
 
@@ -392,8 +392,8 @@ abstract class BaseModel extends BaseModelMethods
 
                for ($i = 0; $i < $maxCount - $item['countFields']; $i++){
 
-                   if ($item['lasJoinTable'])
-                       $item['join'][$item['lasJoinTable']]['fields'][] = null;
+                   if ($item['lastJoinTable'])
+                       $item['join'][$item['lastJoinTable']]['fields'][] = null;
 
                    else
                        $item['fields'][] = null;
