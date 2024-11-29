@@ -644,3 +644,67 @@ Fault: 26-11-2024 21-11-28 - Ошибка в SQL запросе: () UNION () UNI
 E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
 In line41
 
+Fault: 27-11-2024 15-27-57 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%UNI%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%UNI%')) ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 27-11-2024 15-37-48 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%UNI%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%UNI%')) ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 27-11-2024 16-47-10 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%as%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%as%')) D' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 27-11-2024 16-47-14 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%qw%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%qw%')) D' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 27-11-2024 16-48-11 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%as%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%as%')) D' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 27-11-2024 16-48-45 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%sd%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%sd%')) D' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 28-11-2024 14-14-51 - Ошибка в SQL запросе: (Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 28-11-2024 15-48-36 - Ошибка в SQL запросе: (Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 28-11-2024 15-48-47 - Ошибка в SQL запросе: (Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION (Array) UNION () ORDER BY current_table DESC, ((name LIKE ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 28-11-2024 16-39-52 - Ошибка в SQL запросе: (Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%pa ge%')+(name LIKE '%pa%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%pa ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 29-11-2024 10-52-55 - Ошибка в SQL запросе: () UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%Седона%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNION () UNION () UNION () ORDER BY current_table DESC, ((name LIKE '%Седо' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 29-11-2024 10-54-19 - Ошибка в SQL запросе: (Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 29-11-2024 10-54-23 - Ошибка в SQL запросе: (Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 29-11-2024 14-54-52 - Ошибка в SQL запросе: (Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 29-11-2024 14-58-42 - Ошибка в SQL запросе: (Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 29-11-2024 15-00-41 - Ошибка в SQL запросе: (Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((name LIKE '%test%')) DESC - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array) UNION (Array) UNION (Array) UNION (Array) ORDER BY current_table DESC, ((' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
