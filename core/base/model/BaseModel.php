@@ -345,7 +345,7 @@ abstract class BaseModel extends BaseModelMethods
 
                        unset($columns['id_row'], $columns['multi_id_row']);
 
-                       $columns += count($columns);
+                       $count += count($columns);
 
                        foreach ($columns as $field => $value)
                            $this->union[$key]['join'][$table]['fields'][] = $field;

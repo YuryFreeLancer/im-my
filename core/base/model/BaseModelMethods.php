@@ -98,7 +98,7 @@ abstract class BaseModelMethods
 
                   }else{
 
-                      $fields .= $concat_table . $field . ',';
+                      $fields .= (!preg_match('/(\([^()]*\))|(case\s+.+?\s+end)/i', $field) ? $concat_table : '') . $field . ',';
                   }
               }
           }

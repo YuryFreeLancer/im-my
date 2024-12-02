@@ -172,7 +172,7 @@ class Model extends BaseModel
 
            $fields[] = $columns['id_row'] . ' as id';
 
-           $fieldName = isset($columns['name']) ? "CASE WHEN name <> '' THEN name " : '';
+           $fieldName = isset($columns['name']) ? "CASE WHEN {$table}.name <> '' THEN {$table}.name " : '';
 
            foreach ($columns as $col => $value){
 
@@ -180,7 +180,7 @@ class Model extends BaseModel
 
                    if (!$fieldName) $fieldName = 'CASE ';
 
-                   $fieldName .= "WHEN $col <> '' THEN $col ";
+                   $fieldName .= "WHEN {$table}.$col <> '' THEN {$table}.$col ";
 
                }
 
@@ -215,11 +215,26 @@ class Model extends BaseModel
 
            if ($where){
 
-               $this->buildUnion($table, [
-                   'fields' => $fields,
-                   'where' => $where,
-                   'no_concat' => true
-               ]);
+               if ($table === 'goods'){
+
+                   $this->buildUnion($table, [
+                       'fields' => $fields,
+                       'where' => $where,
+                       'join' => [
+                           'categories' => [
+                               'on' => ['parent_id', 'id']
+                           ]
+                       ]
+                   ]);
+
+               }else{
+                   $this->buildUnion($table, [
+                       'fields' => $fields,
+                       'where' => $where,
+                       'no_concat' => true
+                   ]);
+               }
+
 
            }
 
@@ -281,7 +296,7 @@ class Model extends BaseModel
 
                        if (isset($columns[$row])){
 
-                           $where .= "$row LIKE '%$item%' OR ";
+                           $where .= "{$table}.$row LIKE '%$item%' OR ";
 
                        }
 
