@@ -489,7 +489,37 @@ function search(){
                         }
                     }
                 ).then(res => {
+
                     console.log(res);
+
+                    try {
+
+                        res = JSON.parse(res)
+
+                        let resBlok = document.querySelector('.search_res');
+
+                        let counter = res.lenght
+
+                        if (resBlok){
+
+                            resBlok.innerHTML = '';
+
+                            for (let i = 0; i < counter; i++){
+
+                                resBlok.insertAdjacentHTML('beforeend', `<a href="${res[i]['alias']}">${res[i]['name']}</a>`)
+
+                            }
+
+                            searchResultHover();
+
+                        }
+
+                    }catch (e){
+
+                        alert('Ошибка поиска по админ панели')
+
+                    }
+
                 })
 
             }

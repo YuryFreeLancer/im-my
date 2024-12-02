@@ -736,3 +736,7 @@ Fault: 02-12-2024 15-55-04 - Ошибка в SQL запросе: (SELECT goods.i
 D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
 In line41
 
+Fault: 02-12-2024 18-42-57 - Ошибка в SQL запросе: SHOW COLUMNS FROM categories - 1146Table 'im.categories' doesn't exist
+E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+

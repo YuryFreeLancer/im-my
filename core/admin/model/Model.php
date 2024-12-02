@@ -215,25 +215,11 @@ class Model extends BaseModel
 
            if ($where){
 
-               if ($table === 'goods'){
-
-                   $this->buildUnion($table, [
-                       'fields' => $fields,
-                       'where' => $where,
-                       'join' => [
-                           'categories' => [
-                               'on' => ['parent_id', 'id']
-                           ]
-                       ]
-                   ]);
-
-               }else{
-                   $this->buildUnion($table, [
-                       'fields' => $fields,
-                       'where' => $where,
-                       'no_concat' => true
-                   ]);
-               }
+               $this->buildUnion($table, [
+                   'fields' => $fields,
+                   'where' => $where,
+                   'no_concat' => true
+               ]);
 
 
            }
@@ -258,7 +244,19 @@ class Model extends BaseModel
            'order_direction' => $orderDirection
        ]);
 
-       $a = 1;
+       if ($result){
+
+           foreach ($result as $index => $item){
+
+                $result[$index]['name'] .= '(' . (isset($projectTables[$item['table_name']]['name']) ? $projectTables[$item['table_name']]['name'] : $item['table_name']) . ')';
+
+               $result[$index]['alias'] = PATH . Settings::get('routes')['admin']['alias'] . '/edit/' . $item['table_name'] . '/' . $item['id'];
+
+           }
+
+       }
+
+       return $result ?: [];
 
     }
 
