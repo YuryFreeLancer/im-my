@@ -498,7 +498,7 @@ function search(){
 
                         let resBlok = document.querySelector('.search_res');
 
-                        let counter = res.lenght
+                        let counter = res.length > 20 ? 20 : res.length
 
                         if (resBlok){
 
@@ -520,7 +520,7 @@ function search(){
 
                     }
 
-                })
+                });
 
             }
 
