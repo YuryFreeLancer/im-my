@@ -383,7 +383,10 @@ function showHideMenuSearch(){
 
     });
 
-    searchInput.addEventListener('blur', () => {
+    searchInput.addEventListener('blur', e => {
+
+        if (e.relatedTarget && e.relatedTarget.tagName === 'A')
+            return
 
         searchBtn.classList.remove('vg-search-reverse');
 
@@ -423,7 +426,7 @@ let searchResultHover = (() => {
 
             children[activeIndex].classList.add('search_act');
 
-            searchInput.value = children[activeIndex].innerText;
+            searchInput.value = children[activeIndex].innerText.replace(/\(.+?\)s*$/, '');
         }
 
     }

@@ -13,7 +13,8 @@
     <?php if ($this->data) : ?>
         <?php foreach ($this->data as $table => $data) : ?>
             <div class="vg-element vg-fourth">
-                <a href="<?=$this->adminPath ?>edit/<?=$this->table ?>/<?=$data['id']?>" class="vg-wrap vg-element vg-full vg-firm-background-color4 vg-box-shadow show_element">
+                <a href="<?=$data['alias'] ?: $this->adminPath . 'edit/' . $this->table . '/' . $data['id']?>"
+                   class="vg-wrap vg-element vg-full vg-firm-background-color4 vg-box-shadow show_element">
                     <div class="vg-element vg-half vg-center">
                         <?php if($data['img']): ?>
                             <img src="<?= PATH . UPLOAD_DIR . $data['img'] ?>" alt="service">

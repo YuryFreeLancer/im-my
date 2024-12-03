@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta type="keywords" content="...">
     <meta type="description" content="...">
     <title>Document</title>
-
     <?php $this-> getStyles(); ?>
-    
-    
+
 </head>
 
 <body>
@@ -34,12 +31,11 @@
                         <div>
                             <img src="<?= PATH . ADMIN_TEMPLATE ?>img/search.png" alt="">
                         </div>
-                        <form method="post" action="<?= PATH . core\base\settings\Settings::get('routes')['admin']['alias'] ?>/search" autocomplete="off">
+                        <form action="<?= PATH . core\base\settings\Settings::get('routes')['admin']['alias'] ?>/search" autocomplete="off">
                             <input type="text" name="search" class="vg-input vg-text">
                             <input type="hidden" name="search_table" value="<?=$this->table?>">
                             <div class="vg-element vg-firm-background-color4 vg-box-shadow search_links search_res">
-                                <a href="">LINK-1</a><a href="">LINK-2</a><a href="">LINK-3</a><a href="">LINK-4</a><a
-                                        href="">LINK-5</a>
+
                             </div>
                         </form>
                     </div> 
