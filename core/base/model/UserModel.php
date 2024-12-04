@@ -193,6 +193,8 @@ class UserModel extends BaseModel
 
         }
 
+        $this->userData = $this->userData[0];
+
         return true;
 
     }

@@ -4,6 +4,7 @@ namespace core\admin\controller;
 
 use core\base\controller\BaseController;
 use core\base\model\UserModel;
+use core\base\settings\Settings;
 
 class LoginController extends BaseController
 {
@@ -14,7 +15,13 @@ class LoginController extends BaseController
 
         $this->model = UserModel::instance();
 
-        $a = 1;
+        if ($this->isPost()){
+
+            $a = 1;
+
+        }
+
+        return $this->render('', ['adminPath' => Settings::get('routes')['admin']['alias']]);
 
     }
 
