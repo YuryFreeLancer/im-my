@@ -5,7 +5,6 @@ namespace core\base\model;
 use core\base\controller\BaseMethods;
 use core\base\controller\Singleton;
 use core\base\exceptions\AuthException;
-use core\base\model\BaseModel;
 
 class UserModel extends BaseModel
 {
@@ -31,6 +30,18 @@ class UserModel extends BaseModel
     public function getAdminTable(){
 
         return $this->adminTable;
+
+    }
+
+    public function getBlockedTable(){
+
+        return $this->blockedTable;
+
+    }
+
+    public function getLastError(){
+
+        return $this->error;
 
     }
 
@@ -117,6 +128,103 @@ class UserModel extends BaseModel
         }
 
         return  $this->userData;
+
+    }
+
+    private function set(){
+
+        $cookieString = $this->package();
+
+        if ($cookieString){
+
+            setcookie($this->cookieName, $cookieString, time() + 60*60*24*365*10, PATH);
+
+            return true;
+
+        }
+
+        throw  new AuthException('Ошибка формирования cookie', 1);
+
+    }
+
+    private function package(){
+
+        if (!empty($this->userData['id'])){
+
+            $data['id'] = $this->userData['id'];
+
+            $data['version'] = COOCIE_VERSION;
+
+            $data['cookieTime'] = date('Y-m-d H:i:s');
+
+            return Crypt::instance()->encrypt(json_encode($data));
+
+        }
+
+        throw  new AuthException('Нeкорректный идентификатор пользователя ' . $this->userData['id'], 1);
+
+    }
+
+    private function unPackage(){
+
+        if (empty($_COOKIE[$this->cookieName]))
+            throw new AuthException('Отсутсвует cookie пользователя');
+
+        $data = json_decode(Crypt::instance()->decrypt($_COOKIE[$this->cookieName]), true);
+
+        if (empty($data['id']) || empty($data['version']) || empty($data['cookieTime'])){
+
+            $this->logout();
+
+            throw new AuthException('Нeкорректные данные в cookie пользователя', 1);
+
+        }
+
+        $this->validate();
+
+        $this->userData = $this->get($this->userTable, [
+            'where' => ['id' => $data['id']]
+        ]);
+
+        if (!$this->userData){
+
+            $this->logout();
+            throw new AuthException('Нe найдены данные в таблице' . $this->userTable . ' по идентификатору ' . $data['id'], 1);
+
+        }
+
+        return true;
+
+    }
+
+    private function validate($data){
+
+        if (!empty(COOCIE_VERSION)){
+
+            if ($data['version'] !== COOCIE_VERSION){
+
+                $this->logout();
+                throw new AuthException('Нeкорректная версия cookie');
+
+            }
+
+        }
+
+        if (!empty(COOCIE_TIME)){
+
+            if ((new \dateTime()) > (new \dateTime($data['cookieTime']))->modify(COOCIE_TIME . ' minutes')){
+
+                throw new AuthException('Превышено время бездействия пользователя');
+
+            }
+
+        }
+
+    }
+
+    public  function logout(){
+
+        setcookie($this->cookieName, '', 1, PATH);
 
     }
 
