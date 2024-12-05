@@ -15,7 +15,7 @@ class UserModel extends BaseModel
 
     private $cookieName = 'indentifier';
 
-    private $cookieAdminName = 'indentifier';
+    private $cookieAdminName = 'WQEngineCache';
 
     private $userData = [];
 
@@ -53,7 +53,7 @@ class UserModel extends BaseModel
 
         if (!in_array($this->userTable, $this->showTables())){
 
-            $query = 'create table' . $this->userTable . '
+            $query = 'create table ' . $this->userTable . '
             (
                 id int auto_increment primary key,
                 name varchar(255) null,
@@ -76,9 +76,9 @@ class UserModel extends BaseModel
 
         }
 
-        if (in_array($this->blockedTable, $this->showTables())){
+        if (!in_array($this->blockedTable, $this->showTables())){
 
-            $query = 'create table' . $this->blockedTable . '
+            $query = 'create table ' . $this->blockedTable . '
             (
                 id int auto_increment primary key,
                 login varchar(255) null,

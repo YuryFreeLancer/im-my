@@ -65,7 +65,7 @@ trait BaseMethods
         }
     }
 
-    protected function writelog($messege, $file = 'log.txt', $event = 'Fault'){
+    protected function writeLog($messege, $file = 'log.txt', $event = 'Fault'){
 
         $dataTime = new \DateTime();
 

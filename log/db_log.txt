@@ -740,3 +740,259 @@ Fault: 02-12-2024 18-42-57 - Ошибка в SQL запросе: SHOW COLUMNS FR
 E:\OpenServer1\domains\im.my\public_html\core\base\model\BaseModel.php
 In line41
 
+Fault: 05-12-2024 9-32-47 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-33-02 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-34-16 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-34-19 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-35-52 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-35-58 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-36-42 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-36-49 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-36-56 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-40-43 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-41-41 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-42-17 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-43-25 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-43-32 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-43-37 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 05-12-2024 9-48-47 - Ошибка в SQL запросе: create tableusers
+            (
+                id int auto_increment primary key,
+                name varchar(255) null,
+                login varchar(255) null,
+                password varchar(32) null,
+                credentials text null            
+            )
+            charset = utf8
+             - 1064You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tableusers
+            (
+                id int auto_increment primary key,
+ ' at line 1
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
