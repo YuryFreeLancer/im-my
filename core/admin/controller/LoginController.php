@@ -16,7 +16,7 @@ class LoginController extends BaseController
 
         $this->model->setAdmin();
 
-        if (isset($this->parametrs['logaut'])){
+        if (isset($this->parametrs['logout'])){
 
             $this->checkAuth(true);
 
@@ -30,13 +30,6 @@ class LoginController extends BaseController
 
         }
 
-        $timeClean = (new \DateTime())->modify('-' . BLOCK_TIME . ' hour')->format('Y-m-d H:i"s');
-
-        $this->model->delete($this->model->getBlockedTable(), [
-            'where' => ['time' => $timeClean],
-            'operand' => ['<']
-        ]);
-
         if ($this->isPost()){
 
             if (empty($_POST['token']) || $_POST['token'] !== $_SESSION['token']){
@@ -45,8 +38,15 @@ class LoginController extends BaseController
 
             }
 
+            $timeClean = (new \DateTime())->modify('-' . BLOCK_TIME . ' hour')->format('Y-m-d H:i"s');
+
+            $this->model->delete($this->model->getBlockedTable(), [
+                'where' => ['time' => $timeClean],
+                'operand' => ['<']
+            ]);
+
             $ipUser = filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP) ?:
-                (filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP) ?:
+                (filter_var(@$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP) ?:
                     @$_SERVER['REMOTE_ADDR']);
 
             $trying = $this->model->get($this->model->getBlockedTable(), [
@@ -60,9 +60,9 @@ class LoginController extends BaseController
 
             if (!empty($_POST['login']) && !empty($_POST['password']) && $trying < 3){
 
-                $login = $this->clearStr(($_POST['login']);
+                $login = $this->clearStr($_POST['login']);
 
-                $password = md5($this->clearStr(($_POST['password']));
+                $password = md5($this->clearStr(($_POST['password'])));
 
                 $userData = $this->model->get($this->model->getAdminTable(), [
                     'fields' => ['id', 'name'],
@@ -79,7 +79,7 @@ class LoginController extends BaseController
 
                         $method = 'edit';
 
-                        $where['id'] = $ipUser;
+                        $where['ip'] = $ipUser;
 
                     }
 
@@ -108,6 +108,8 @@ class LoginController extends BaseController
 
             }elseif ($trying >= 3){
 
+                $this->model->logout();
+
                 $error = 'Превышено максимальное количество попыток ввода пароля - ' . $ipUser;
 
             }else{
@@ -116,7 +118,7 @@ class LoginController extends BaseController
 
             }
 
-            $_SESSION['res']['answer'] = $success ? '<div class="success">Добро пожаловать' . $userData['name'] . '</div>' :
+            $_SESSION['res']['answer'] = $success ? '<div class="success">Добро пожаловать ' . $userData[0]['name'] . '</div>' :
                 preg_split('/\s*\-/', $error, 2, PREG_SPLIT_NO_EMPTY)[0];
 
             $this->writeLog($error, 'user_log.txt', 'Access user');
