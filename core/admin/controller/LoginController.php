@@ -38,7 +38,8 @@ class LoginController extends BaseController
 
             }
 
-            $timeClean = (new \DateTime())->modify('-' . BLOCK_TIME . ' hour')->format('Y-m-d H:i"s');
+            //$timeClean = (new \DateTime())->modify('-' . BLOCK_TIME . ' hour')->format('Y-m-d H:i"s');
+            $timeClean = (new \DateTime())->modify('-' . 1 . ' seconds')->format('Y-m-d H:i"s');
 
             $this->model->delete($this->model->getBlockedTable(), [
                 'where' => ['time' => $timeClean],

@@ -1,6 +1,11 @@
 <?php
 
+
+
 namespace core\admin\controller;
+
+
+
 
 use core\admin\model\Model;
 use core\base\controller\BaseController;
@@ -37,6 +42,18 @@ abstract class BaseAdmin extends BaseController
     protected $noDelete;
 
     protected function inputData(){
+
+//        if (!MS_MODE){
+//
+//            if (preg_match('/msie|trident.+?rv\s*:/i', $_SERVER['HTTP_USER_AGENT'])){
+//
+//                exit('Устаревшая версия браузера. Пожалуйста обновитесь.');
+//
+//            }
+//
+//        }
+
+        $this->checkAuth(true); // - блокировка админ панели
 
         $this->init(true);
 

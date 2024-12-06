@@ -615,3 +615,18 @@ function createjsSortable(form){
     }
 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    function hideMessages(){
+
+        document.querySelectorAll('.success, .error').forEach(item => item.remove());
+
+        console.log('remove')
+        document.removeEventListener('click', hideMessages);
+
+    }
+
+    document.addEventListener('click', hideMessages);
+
+});

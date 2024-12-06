@@ -180,7 +180,7 @@ class UserModel extends BaseModel
 
         }
 
-        $this->validate();
+        $this->validate($data);
 
         $this->userData = $this->get($this->userTable, [
             'where' => ['id' => $data['id']]

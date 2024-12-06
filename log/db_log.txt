@@ -996,3 +996,23 @@ Fault: 05-12-2024 9-48-47 - Ошибка в SQL запросе: create tableuser
 D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
 In line41
 
+Fault: 06-12-2024 14-57-07 - Ошибка в SQL запросе: DELETE pages FROM pages  WHERE pages.id='3'  - 1451Cannot delete or update a parent row: a foreign key constraint fails (`im`.`articles`, CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `pages` (`id`) ON UPDATE CASCADE)
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 06-12-2024 14-57-41 - Ошибка в SQL запросе: DELETE pages FROM pages  WHERE pages.id='3'  - 1451Cannot delete or update a parent row: a foreign key constraint fails (`im`.`articles`, CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `pages` (`id`) ON UPDATE CASCADE)
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 06-12-2024 15-18-07 - Ошибка в SQL запросе: DELETE pages FROM pages  WHERE pages.id='3'  - 1451Cannot delete or update a parent row: a foreign key constraint fails (`im`.`articles`, CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `pages` (`id`) ON UPDATE CASCADE)
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 06-12-2024 15-19-08 - Ошибка в SQL запросе: DELETE pages FROM pages  WHERE pages.id='3'  - 1451Cannot delete or update a parent row: a foreign key constraint fails (`im`.`articles`, CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `pages` (`id`) ON UPDATE CASCADE)
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
+Fault: 06-12-2024 15-19-44 - Ошибка в SQL запросе: DELETE pages FROM pages  WHERE pages.id='3'  - 1451Cannot delete or update a parent row: a foreign key constraint fails (`im`.`articles`, CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `pages` (`id`) ON UPDATE CASCADE)
+D:\OSPanel\domains\im.my\public_html\core\base\model\BaseModel.php
+In line41
+
